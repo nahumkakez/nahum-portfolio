@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: nahum-portfolio-frontend
+    runtime: node
+    plan: free
+    buildCommand: cd frontend && npm install && npm run build
+    startCommand: npx serve -s frontend/dist
+    envVars:
+      - key: NODE_VERSION
+        value: 18.17.0
