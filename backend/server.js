@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-// Données du portfolio
+// ===== DONNÉES DU PORTFOLIO =====
 const portfolioData = {
   profil: {
     nom: "KAKEZ MUSANS NAHUM",
@@ -121,7 +121,7 @@ const portfolioData = {
   ]
 };
 
-// Routes
+// ===== ROUTES =====
 app.get('/api/all', (req, res) => {
   res.json(portfolioData);
 });
@@ -162,7 +162,7 @@ app.get('/api/references', (req, res) => {
   res.json(portfolioData.references);
 });
 
-// Démarrer le serveur
+// ===== DÉMARRAGE =====
 app.listen(PORT, () => {
   console.log(`🚀 API Nahum Portfolio démarrée sur le port ${PORT}`);
   console.log(`📡 Health check: http://localhost:${PORT}/api/health`);
